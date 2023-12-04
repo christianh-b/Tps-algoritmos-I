@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es-AR"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="TP3%20Flood%20-%20Algoritmos%20y%20Programaci%C3%B3n%201_archivos/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-L4Q2C0MMS8');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        
+    
+    <title>TP3 * Flood - Algoritmos y Programación 1</title>
+    <link rel="shortcut icon" href="https://algoritmos1rw.ddns.net/static/favicon.ico">
+    <link rel="stylesheet" href="TP3%20Flood%20-%20Algoritmos%20y%20Programaci%C3%B3n%201_archivos/bootstrap.min.css">
+    <style>
+      
+      
+      
+      
+      
+      
+      
+      body {
+        font-family: sans-serif;
+        font-size: 16px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      a, a:hover, a:focus {
+        text-decoration: none;
+        transition: all 0.15s;
+      }
+      :not(pre) > code {
+        color: #333;
+        background-color: #f5f5f5;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      a > code {
+        color: #337ab7;
+      }
+      .wrapper {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .bottom {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        background-color: #f0f0f0;
+      }
+      #sidebar {
+        min-width: 185px;
+        max-width: 185px;
+        background: #2e6ea5;
+        color: #f0f0f0;
+        transition: all 0.15s;
+        margin-left: 0;
+        position: relative;
+        padding-top: 30px;
+      }
+      #sidebar-bg {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAAB2BAMAAABG/bK2AAAAD1BMVEUubqUzercvcqsxdrIwdK7W3XQNAAAEAUlEQVRYw62W0WGjMAyGHZMBEGYAGzIADhkg0Nt/pgMJ5XcRhHs4PbSl/izJ8i+Be7t/tR3qx/C8Qv1jnJdfmYiGC3RipiLKFOJXtKfFgkv0XDYNX9FM84Mo5nZJhZpvaEXD6vnJDqfwDb1RXN2NjKZTtOvitprpOzoShTgp2nxDabF2oijoSk3tF5QyPQVdt+T6DA0dFzUK+nZ3OpOFMrXzvAOpGmu5rEu+28/+XAPrme8rxL7DuDg+R+VsTU9iEKFFtzJtZGBF/ukO0CAVXWx8zd3jZz1+WrfMtgJtFK/w48X/a580h6Rfer5rLtHc1uDxX5HkERtXtL5pLYGOws47tMmie6BL/v7nd+l87RAIucrVPnK5lgTV8HDAVjr2xGhwO1QcwfEc/SQoMjXmM6kxGo+pTicEUKNPRcLmGGh96JMQrlf0uD8Sozgdo8fxpxJ1fmK0tZzKsnhktDlFES9JAoM9UhS0gSgEfduyt4K+UQ1Boz38Ak2FqLKiYMojeDRi0isIJv4nS1zA01v0Mz/wyDJk1JSV55HHGTnGOQrxT/znN1Rz6LlmxyimAP+tR/w5QJcSAfV5C5/JookGEZW8FaRFH6auklK7ZTBIoq32LVAcaSv6lvSLwVdn0Jvo2Xea4KcaeS+XBD1JyuPc+bwmMwHF8vPPrLmETrYvaIK0gYpjTxpgzMtvQetdAlL1hIap1sDVvg0TjgHUjW5Dg73/RgpVOrmvaHkur7lWsgPmGR2K++/Fm2QyGLT9xGiYfUXMIVguh2YqFifEB4pAuQiZzQtiKgc8O/JRKmEGZKrxFejXTT076xEeSqpdx25RKNGGnfpV7WLFy4LiVu14WFCXtwWd+YyaUeoXVCcPZCW629uwoNrst0/73Y7Qt9PPNvEuTHWERkbvxKy0H1DjVXXaSPttaL1/Nfa1oDpwINvWjmdBtWDo8XCKJr6fLirKJTEoPley+kroFnQHUDagXIteXfeMvjFU1ZXOwlGz8ASUH1CFz7SKmM6YryrAX2gwL07EjAiBIEBbPDWIJztR5/Iro2cZ4AZ6vGSBsi8RAGrl3GN2BjVtlPeXlRQ133moBfYyagR3s/NKUSu43fYElGx8OWsaXzIdBTWJJaA3gRS1MxdoZVGU6xOuPUOHwumF14AxWqLeorjuni5RKpsBdc0W3VT1wNJwhKq9/owkhijJotaiyOESxZv4CoWC/CWKq85XKK4vXaEQRWXRYFLVZK0GkokPTQDFZ0UZHxkYEWYTXyxbaScbH1oDGiAqfbRugbq9qpCtolnRyjoVS4r+fBYnc3x8xDPayar8C+EtW4uzWtolLwG0ywxbLwDS853MWMuO4q63Ua09Rkb6cYzuv9pfxQXCk4JboV4AAAAASUVORK5CYII=');
+        background-repeat: no-repeat;
+        background-size: 185px auto;
+        width: 185px;
+        height: 300px;
+      }
+      #sidebar.active {
+        margin-left: -185px;
+      }
+      @media only screen and (max-device-width: 768px) {
+        #sidebar {
+          margin-left: -185px;
+        }
+        #sidebar.active {
+          margin-left: 0;
+        }
+        .wideonly {
+          display: none;
+        }
+      }
+      #sidebar ul {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+      }
+      #sidebar a {
+        padding: 5px 15px;
+        display: inline-block;
+        width: 100%;
+        color: inherit;
+        text-transform: uppercase;
+      }
+      #sidebar li.active a {
+        background-color: #f0f0f0;
+        color: #337ab7;
+      }
+      #sidebar a:hover, #sidebar a:active {
+        color: white;
+        background-color: #f0f0f020;
+      }
+      .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px solid #337ab7;
+        background-color: white;
+        color: #337ab7;
+        text-transform: uppercase;
+        height: 48px;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .navtitle {
+        font-size: 120%;
+        margin: 5px;
+      }
+      .hamburger {
+        font-size: 110%;
+        padding: 0 15px;
+        margin-top: 3px;
+      }
+      #content {
+        padding: 30px;
+        max-width: 60em;
+        min-width: 295px;
+      }
+      h1 {
+        font-size: 200%;
+      }
+      h2 {
+        font-size: 150%;
+      }
+      h3 {
+        font-size: 120%;
+      }
+      #content > :first-child {
+        margin-top: 0;
+      }
+      thead {
+        border-bottom: 1px solid;
+      }
+      td, th {
+        padding: 5px 10px;
+      }
+      hr {
+        border-top: 1px solid #ccc;
+      }
+      .alert.alert-info a {
+        text-decoration: underline;
+      }
+      
+      input#website {
+        display: none;
+      }
+      .codehilite .hll { background-color: #ffffcc }
+      .codehilite  { background: #f8f8f8; }
+      .codehilite .c { color: #408080; font-style: italic } /* Comment */
+      .codehilite .err { border: 1px solid #FF0000 } /* Error */
+      .codehilite .k { color: #008000; font-weight: bold } /* Keyword */
+      .codehilite .o { color: #666666 } /* Operator */
+      .codehilite .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+      .codehilite .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+      .codehilite .cp { color: #BC7A00 } /* Comment.Preproc */
+      .codehilite .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+      .codehilite .c1 { color: #408080; font-style: italic } /* Comment.Single */
+      .codehilite .cs { color: #408080; font-style: italic } /* Comment.Special */
+      .codehilite .gd { color: #A00000 } /* Generic.Deleted */
+      .codehilite .ge { font-style: italic } /* Generic.Emph */
+      .codehilite .gr { color: #FF0000 } /* Generic.Error */
+      .codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+      .codehilite .gi { color: #00A000 } /* Generic.Inserted */
+      .codehilite .go { color: #888888 } /* Generic.Output */
+      .codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+      .codehilite .gs { font-weight: bold } /* Generic.Strong */
+      .codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+      .codehilite .gt { color: #0044DD } /* Generic.Traceback */
+      .codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+      .codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+      .codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+      .codehilite .kp { color: #008000 } /* Keyword.Pseudo */
+      .codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+      .codehilite .kt { color: #B00040 } /* Keyword.Type */
+      .codehilite .m { color: #666666 } /* Literal.Number */
+      .codehilite .s { color: #BA2121 } /* Literal.String */
+      .codehilite .na { color: #7D9029 } /* Name.Attribute */
+      .codehilite .nb { color: #008000 } /* Name.Builtin */
+      .codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+      .codehilite .no { color: #880000 } /* Name.Constant */
+      .codehilite .nd { color: #AA22FF } /* Name.Decorator */
+      .codehilite .ni { color: #999999; font-weight: bold } /* Name.Entity */
+      .codehilite .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+      .codehilite .nf { color: #0000FF } /* Name.Function */
+      .codehilite .nl { color: #A0A000 } /* Name.Label */
+      .codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+      .codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
+      .codehilite .nv { color: #19177C } /* Name.Variable */
+      .codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+      .codehilite .w { color: #bbbbbb } /* Text.Whitespace */
+      .codehilite .mb { color: #666666 } /* Literal.Number.Bin */
+      .codehilite .mf { color: #666666 } /* Literal.Number.Float */
+      .codehilite .mh { color: #666666 } /* Literal.Number.Hex */
+      .codehilite .mi { color: #666666 } /* Literal.Number.Integer */
+      .codehilite .mo { color: #666666 } /* Literal.Number.Oct */
+      .codehilite .sa { color: #BA2121 } /* Literal.String.Affix */
+      .codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
+      .codehilite .sc { color: #BA2121 } /* Literal.String.Char */
+      .codehilite .dl { color: #BA2121 } /* Literal.String.Delimiter */
+      .codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+      .codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
+      .codehilite .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+      .codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
+      .codehilite .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+      .codehilite .sx { color: #008000 } /* Literal.String.Other */
+      .codehilite .sr { color: #BB6688 } /* Literal.String.Regex */
+      .codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
+      .codehilite .ss { color: #19177C } /* Literal.String.Symbol */
+      .codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
+      .codehilite .fm { color: #0000FF } /* Name.Function.Magic */
+      .codehilite .vc { color: #19177C } /* Name.Variable.Class */
+      .codehilite .vg { color: #19177C } /* Name.Variable.Global */
+      .codehilite .vi { color: #19177C } /* Name.Variable.Instance */
+      .codehilite .vm { color: #19177C } /* Name.Variable.Magic */
+      .codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+      .video-container {
+        position: relative;
+        padding-top: 56.25%;
+        margin: 1em 0;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      
+      
+    </style>
+    <meta name="theme-color" content="#2e6ea5">
+    
+    
+  </head>
+<body>
+
+<div class="wrapper">
+
+  <div class="nav">
+    <a href="#" id="sidebarCollapse" class="hamburger" aria-label="Menu"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+    
+      <span class="navtitle wideonly"><a href="https://algoritmos1rw.ddns.net/">Algoritmos y Programación 1</a></span>
+      <span class="navtitle wideonly">|</span>
+      <span class="navtitle">TP3 * Flood</span>
+    
+  </div>
+
+  <div class="bottom">
+    <nav id="sidebar" role="navigation">
+      <div id="sidebar-bg"></div>
+      <ul class="list-unstyled components">
+        
+            <li>
+                <a href="https://algoritmos1rw.ddns.net/">Inicio</a>
+            </li>
+        
+            <li>
+                <a href="https://algoritmos1rw.ddns.net/material">Material</a>
+            </li>
+        
+            <li>
+                <a href="https://algoritmos1rw.ddns.net/tps">TPs</a>
+            </li>
+        
+            <li>
+                <a href="https://algoritmos1rw.ddns.net/calendario">Calendario</a>
+            </li>
+        
+            <li>
+                <a href="https://algoritmos1rw.ddns.net/bibliografia">Bibliografía</a>
+            </li>
+        
+            <li>
+                <a href="https://algoritmos1rw.ddns.net/python">Python</a>
+            </li>
+        
+            <li>
+                <a href="https://algoritmos1rw.ddns.net/encuestas">Encuestas</a>
+            </li>
+        
+            <li>
+                <a href="https://algoritmos1rw.ddns.net/docentes/">Docentes</a>
+            </li>
+        
+            <li>
+                <a href="https://algoritmos1rw.ddns.net/regimen">Régimen de cursada</a>
+            </li>
+        
+            <li>
+                <a href="https://algoritmos1rw.ddns.net/faq">Preguntas frecuentes</a>
+            </li>
+        
+            <li>
+                <a href="https://algoritmos1rw.ddns.net/entregas/">Entregas</a>
+            </li>
+        
+            <li>
+                <a href="https://algoritmos1rw.ddns.net/notas/">Notas</a>
+            </li>
+        
+      </ul>
+    </nav>
+    <main id="content">
+      
+    <h1 id="tp3-flood">TP3: Flood</h1>
+<p>Para el tercer y último trabajo práctico, se pide completar la funcionalidad de
+un código para el juego
+<a href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/flood.html"><strong>Flood</strong>, puntualmente la versión disponible en la colección de Simon
+Tatham</a>.</p>
+<p>Consiste en un tablero de colores, donde el <em>"flood"</em> será el color
+correspondiente a la esquina de arriba a la izquierda. El jugador podrá
+seleccionar un cambio de color al <em>"flood"</em>, tomando una mayor área. El objetivo
+es convertir todo el tablero del mismo color.</p>
+<p><img src="TP3%20Flood%20-%20Algoritmos%20y%20Programaci%C3%B3n%201_archivos/gameplay.gif" alt="Gameplay" width="500"></p>
+<h2 id="parte-0-archivos-base">Parte 0 - Archivos base</h2>
+<p>El siguiente trabajo práctico se encuentra dividido por partes, agregando
+funcionalidad en cada una. No es necesario leer todo el enunciado para comenzar
+a desarrollar, pero es importante que cada parte esté funcionando sin errores
+antes de seguir con la siguiente. Se provee el siguiente código base:</p>
+<p><a href="https://algoritmos1rw.ddns.net/static/2023-c2/tp3/flood.zip" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> flood.zip</a></p>
+<p>El empaquetado contiene:</p>
+<ul>
+<li>El programa principal <code>main.py</code> con la interfaz gráfica ya implementada.</li>
+<li>Implementaciones de los TDAs <code>pila.py</code>, <code>cola.py</code>. Incluyen métodos <code>__str__</code>
+    para facilitar el desarrollo y depuración.</li>
+<li>Una biblioteca de funciones <code>gamelib.py</code> que facilita la interfaz del
+    programa. Para el trabajo práctico no será necesario aprender las funciones
+    de gamelib, pero si te interesa saber más, <a href="https://github.com/dessaya/python-gamelib">acá está la página de la
+    biblioteca</a>.</li>
+<li><strong>Los archivos a modificar durante el trabajo <code>flood.py</code> y <code>juegoflood.py</code>.</strong><ul>
+<li>Los métodos a completar se encuentran documentados. La funcionalidad a
+    agregar no debe romper los contratos de las mismas (tipos de datos en
+    los retornos, responsabilidad, cantidad de parámetros, etc).</li>
+</ul>
+</li>
+</ul>
+<p>Antes de empezar el desarrollo del trabajo práctico, primero debemos asegurar
+que lo descargado funciona sin problemas.</p>
+<div class="alert alert-warning">
+<p>Ejecutar el programa <code>main.py</code>. Debería observarse una ventana gris con algunos
+botones, y en la terminal el mensaje <em>"No se implementaron todos los métodos de
+la Parte 1"</em>.</p>
+<p><strong>Si ese no fue el resultado y el programa cerró con alguna otra excepción</strong>
+significa que el componente gráfico no está funcionando correctamente en el
+sistema. Algunos errores comunes son los siguientes:</p>
+<ul>
+<li>Gamelib (la biblioteca usada en el TP3) no suele funcionar correctamente con
+    Windows para Linux (WSL) debido al componente gráfico que requiere. Si estás
+    usando WSL, utilizá la línea de comandos tradicional de Windows junto con la
+    instalación de Python normal.</li>
+<li>Es posible que <code>tkinter</code>, necesario para el funcionamiento de Gamelib, no
+    esté instalado. Intentá instalarlo para tu sistema operativo
+    correspondiente.</li>
+<li><strong>Si ya intentaste con los items de arriba y el programa sigue sin abrir
+    correctamente, preguntá por el canal del trabajo práctico en Discord.</strong></li>
+</ul>
+</div>
+<h2 id="parte-1-esqueleto-y-estructura-del-juego">Parte 1 - Esqueleto y estructura del juego</h2>
+<p>El objetivo de esta primer parte será completar los primeros cinco métodos de
+la clase <code>Flood</code>, el cuál manejará un tablero de colores.</p>
+<p>La clase <code>Flood</code> deberá administrar un tablero de colores, donde recomendamos
+que la misma esté representada como una lista de listas de enteros. Entonces,
+por ejemplo, un tablero de 4x4 que fue mezclado con 3 colores podría tener este
+estilo:</p>
+<div class="codehilite"><pre><span></span><code>[[0, 0, 1, 0],
+ [1, 0, 2, 2],
+ [2, 1, 0, 2],
+ [1, 2, 2, 2]]
+</code></pre></div>
+
+
+<div class="alert alert-warning">
+<p>Para esta parte se pide desarrollar los siguientes métodos para la clase <code>Flood</code>
+dentro del del archivo <code>flood.py</code>:</p>
+<ul>
+<li><code>Flood.__init__</code>: inicializa el tablero para las dimensiones especificadas,
+    con un solo color para todo el tablero.</li>
+<li><code>Flood.mezclar_tablero</code>: modifica el tablero para que, de forma completamente
+    aleatoria, tenga <code>n_colores</code> a lo largo del mismo.</li>
+<li><code>Flood.obtener_color</code>: devuelve el color que se encuentra en las coordenadas
+    solicitadas. </li>
+<li><code>Flood.dimensiones</code>: devuelve las dimensiones del juego en una tupla,
+    indicando el alto y el ancho <em>en ese orden</em>.</li>
+<li><code>Flood.obtener_posibles_colores</code>: devuelve un iterable ordenado (como por
+    ejemplo una lista) de todos los colores que fueron utilizados para generar
+    el juego. Por ejemplo, si los colores toman valores numéricos, la función
+    debe devolver una lista con <code>[0, 1, ..., n_colores - 1]</code>.</li>
+</ul>
+<p>Los atributos y estructuras de la clase <code>Flood</code> necesarias para llevar adelante
+estas cuatro funciones quedan a criterio propio. Se recomienda guardar al menos
+el tablero en sí y la cantidad de colores con la cuál se mezcló el tablero.</p>
+</div>
+<div class="alert alert-info">
+<p>Al finalizar esta parte, se podrá ejecutar el programa, el cuál debería mostrar
+un tablero de 5 colores mezclado. Debería generarse uno diferente al clickear el
+botón <code>Nuevo</code>.</p>
+<p>Con el juego inicializado, ahora se pueden modificar las constantes del
+<code>main.py</code> para controlar las dimensiones, la cantidad de colores y otros
+aspectos visuales.</p>
+</div>
+<h2 id="parte-2-cambio-de-color">Parte 2 - Cambio de color</h2>
+<p>Ahora que está el tablero generado, faltaría agregar la lógica para cambiar el
+color del flood, así el juego puede ir progresando.</p>
+<p>El bloque de color adyacente de la esquina superior izquierda es lo que nos
+permite ir avanzando. Cuando se cambia el color del bloque, este se volverá más
+grande por combinarse con los vecinos del nuevo color.</p>
+<div class="alert alert-warning">
+<p>Se pide implementar el método <code>cambiar_color(self, color_nuevo)</code> de la clase
+<code>Flood</code>. Para esto el algoritmo debe:</p>
+<ul>
+<li>Observar el color actual del food, dado por la coordenada <code>(0, 0)</code> (llamémoslo
+    A), y el color a cambiar (llamémoslo B). Si A es igual a B, no se debería
+    aplicar un cambio. Caso contrario, se continúa.</li>
+<li>Pintar ese casillero y todos los casilleros vecinos que sean de color A con el
+    color B, repitiendo con los casilleros vecinos (arriba, abajo, izquierda, y
+    derecha) siempre y cuando sean de color A.</li>
+</ul>
+<p>Este algoritmo suele ser fácil de implementar en forma <strong>recursiva</strong>. Para el
+trabajo práctico, solo se aceptan soluciones <strong>recursivas</strong> del mismo.</p>
+</div>
+<div class="alert alert-info">
+<p>Al finalizar esta parte, se podrán seleccionar los colores haciendo click en el
+tablero.</p>
+</div>
+<h2 id="parte-3-deshacer-y-rehacer">Parte 3 - Deshacer y rehacer</h2>
+<p>En el caso de que el usuario se equivoque o decida probar una combinación
+diferente de colores, el juego debería permitir deshacer y rehacer las
+diferentes acciones.</p>
+<p>El "deshacer" permite revertir las últimas selecciones de colores. Para esto el
+juego debe tener la capacidad de recordar una cantidad ilimitada de esas
+selecciones, y si deshacemos repetidas veces deberíamos siempre poder llegar al
+estado inicial del tablero.</p>
+<p>Por otro lado, la herramienta "rehacer" permite "deshacer el deshacer" y solo
+tiene efecto luego de haber hecho "deshacer" una o más veces seguidas. La idea
+es que el usuario tenga la opción de usar "deshacer" y "rehacer" todas las veces
+que quiera para visualizar el cambio del tablero en sentido inverso (al
+"deshacer") y en sentido directo (al "rehacer"). En cualquier momento en el que
+el usuario hace cualquier acción que no sea "deshacer" o "rehacer", pierde la
+posibilidad de "rehacer" hasta la próxima vez que haga "deshacer".</p>
+<p>Para resumir: este funcionamiento se asimila a cómo funcionan las operaciones de
+deshacer y rehacer en programas tradicionales, como fuera un editor de texto, o
+un editor de imágenes. <strong>Los casos borde deben funcionar similar a cómo suceden
+en dichos programas.</strong></p>
+<p>Estas funcionalidades se implementan con un par de <strong>pilas</strong>.</p>
+<p>Para esta parte será necesario modificar la clase <code>JuegoFlood</code> de
+<code>juegoflood.py</code>. Esta clase es la que realiza las llamadas a los métodos de la
+clase <code>Flood</code> sobre su propio <code>self.flood</code>, y a su vez permitirá administrar
+múltiples instancias de <code>Flood</code> para implementar el deshacer y rehacer.</p>
+<div class="alert alert-warning">
+<p>Antes de implementar la funcionalidad para deshacer y rehacer, es importante
+completar el siguiente método en <code>Flood</code>:</p>
+<ul>
+<li><code>Flood.clonar</code>: devuelve una nueva instancia de <code>Flood</code> con los mismos
+    atributos que la misma. Se deberá llamar a este método en los métodos de
+    <code>JuegoFlood</code>. <strong>Es necesario que la copia sea profunda para que no
+    haya problemas a la hora de implementar el deshacer/rehacer</strong>. No está
+    permitido el uso del módulo <code>copy</code>.</li>
+</ul>
+<p>Una vez realizado el <code>Flood.clonar</code> se pide modificar los siguientes métodos
+para llevar adelante las funcionalidades solicitadas:</p>
+<ul>
+<li><code>JuegoFlood.__init__</code></li>
+<li><code>JuegoFlood.cambiar_color</code></li>
+<li><code>JuegoFlood.deshacer</code></li>
+<li><code>JuegoFlood.rehacer</code></li>
+</ul>
+</div>
+<div class="alert alert-info">
+<p>Al finalizar esta parte, se podrán utilizar los botones de <code>deshacer</code> y
+<code>rehacer</code> del programa.</p>
+</div>
+<h2 id="parte-4-solucion-automatica-y-cantidad-de-movimientos">Parte 4 - Solución automática y cantidad de movimientos</h2>
+<p>Uno de los desafíos del Flood es intentar solucionarlo en la menor cantidad de
+movimientos posibles. Para esta última parte se implementará un algoritmo para
+encontrar una posible solución del juego, con un par de objetivos:</p>
+<ul>
+<li>Permitirle al usuario una solución en cualquier punto del juego.</li>
+<li>Dar una cantidad de movimientos para que el juego se "pueda perder".</li>
+</ul>
+<p>Al hablar de una solución, primero es necesario determinar cuándo se terminó el
+juego. Entonces para comenzar:</p>
+<div class="alert alert-warning">
+<p>Se pide implementar el método <code>Flood.esta_completado</code> para luego utilizarlo en
+el algoritmo de cálculo de solución.</p>
+</div>
+<p>El algoritmo a implementar intentará resolver el juego en la menor cantidad de
+movimientos posibles, y será del tipo
+<a href="https://en.wikipedia.org/wiki/Greedy_algorithm">Greedy</a>. Este es un tipo de
+algoritmo que usa una heurística o regla para determinar el siguiente paso
+"óptimo" a partir de un estado local, aplicando un paso de forma iterativa 
+hasta que se llegue a una solución. En el caso del Flood, no siempre va a
+garantizar la solución de menor movimientos posibles pero es una aproximación
+que se encuentra de forma rápida.</p>
+<p>El algoritmo en sí de solución es intuitivo. Mientras el juego no esté
+completado, repetimos:</p>
+<ol>
+<li>Evaluamos cada color utilizando un <strong>criterio específico</strong> (*) y nos
+    quedamos con el color que maximiza o minimiza el criterio.</li>
+<li>Cambiamos el flood según el color ganador.</li>
+</ol>
+<p>El <strong>criterio</strong> del primer paso es la parte interesante del algoritmo. Puede
+ser un criterio de sentido común que nosotros mismos podríamos aplicar a la
+hora de jugar al juego. Como criterio simple, recomendamos implementar que se
+busque <strong>el color que más casilleros agregaría al flood actual</strong>.</p>
+<div class="alert alert-warning">
+<p>Se pide implementar:</p>
+<ul>
+<li><code>JuegoFlood._calcular_movimientos</code>: calcula una solución del Flood, devuelve
+    la cantidad de movimientos y una <code>Cola</code> con la secuencia de movimientos que
+    solucionan el <code>Flood</code>. <strong>Completar la documentación del método describiendo
+    en pocas palabras el criterio de solución utilizado</strong>.</li>
+<li>Si se considera necesario, implementar un método dentro de <code>Flood</code> para
+    facilitar el cálculo del criterio.</li>
+</ul>
+</div>
+<div class="alert alert-info">
+<p>Al finalizar esta parte, la cantidad de movimientos "máxima" indicada en la
+ventana será la que devolvió el algoritmo, y también funcionará el botón
+<code>solucionar</code>.</p>
+</div>
+<h2 id="entrega">Entrega</h2>
+<p>Se deberán <a href="https://algoritmos1rw.ddns.net/entregas">entregar al formulario</a> los archivos <code>flood.py</code> y
+<code>juegoflood.py</code> que se hayan utilizado. Si se realizaron cambios importantes en
+el programa principal o en los TDAs, también deben incluirse con la entrega.</p>
+<h3 id="extra-envio-por-hopper">Extra: Envío por Hopper</h3>
+<p>De forma <strong>extra y opcional</strong>, pueden ayudar a probar un Trabajo Práctico
+Profesional en desarrollo llamado <strong>Hopper</strong> (elaborado por Javier Di Santo,
+Camila Dvorkin, y Juan Pablo Rombolá). Están buscando voluntarios para que
+prueben el sistema y envíen feedback.</p>
+<p>Similar a RPL que es una plataforma para la guía de ejercicios, Hopper es un
+sistema para trabajos prácticos, que permite entregar, ver versiones, ejecutar
+pruebas sobre lo entregado, y recibir la corrección, todo en una misma página.</p>
+<p>Si quieren participar, los pasos a seguir son los siguientes:</p>
+<ol>
+<li>Ingresar a la <a href="https://web-tpp-hopper.vercel.app/"><strong>plataforma de Hopper</strong></a></li>
+<li>Crearse una cuenta, inscribirse en el curso de Algoritmos I - Essaya</li>
+<li>Subir los archivos <code>flood.py</code> y <code>juegoflood.py</code> por el sistema bajo "TP3"</li>
+<li>Ver la ejecución de pruebas/acciones de la entrega realizada, para comprobar
+   que la entrega pase los casos contemplados. Si las pruebas no se ejecutaron
+   correctamente, podés mandar otra entrega. No es criterio mínimo de aprobación
+   del TP3 que las pruebas pasen!</li>
+</ol>
+<p>Si decidís participar:</p>
+<ul>
+<li>Antes que nada, ¡muchas gracias! ❤️</li>
+<li>Recordá, sí o sí, <strong>mandar el trabajo práctico por nuestra típica página de
+    Algoritmos 1</strong>. Hopper no reemplaza la modalidad de entrega que venimos
+    practicando hasta ahora en la cursada</li>
+<li>Si completaste todo, nos serviría que llenes los siguientes formularios:<ul>
+<li><a href="https://docs.google.com/forms/d/1ZyqfTJKdk5h-qqHFi4Gvf7RkMXTplUgEboN7KcEHgCM/edit?ts=654ad1ee"><strong>Formulario de
+    feedback</strong></a>,
+    para entender tu experiencia</li>
+<li><a href="https://docs.google.com/forms/d/1Nc3Cv82zqeCQZdnuUb0DGLnVjyAITfdmoteEnseTmaA/edit"><strong>Formulario de
+    bugs</strong></a>
+    en el caso que hayas visto algún error o comportamiento inesperado</li>
+</ul>
+</li>
+</ul>
+
+    </main>
+  </div>
+</div>
+
+<script src="TP3%20Flood%20-%20Algoritmos%20y%20Programaci%C3%B3n%201_archivos/jquery.min.js"></script>
+<script src="TP3%20Flood%20-%20Algoritmos%20y%20Programaci%C3%B3n%201_archivos/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#sidebarCollapse").on("click", function() {
+      $("#sidebar").toggleClass("active");
+    });
+  });
+</script>
+
+</body></html>
